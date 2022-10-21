@@ -9,7 +9,7 @@ exports.connection = () => {
       (err, client) => {
         if (err) console.log("error", err);
         console.log("Connected correctly to database");
-        var db = client.db("Adrixus");
+        var db = client.db("interview");
         resolve(db);
       }
     );
