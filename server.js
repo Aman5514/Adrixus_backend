@@ -13,7 +13,10 @@ const path = require('path')
 
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
 app.use(bodyParser.json({ limit: "100mb" }));
-app.use(cors());
+var corsOptions = {
+  origin: '*',
+}
+app.use(cors(corsOptions));
 db.connection().then((database) => {
   module.exports = database;
   app.use("/api/auth", require("./routes/auth.routes"));
