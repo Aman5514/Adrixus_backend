@@ -9,8 +9,8 @@ const schema = require("./schema/schema");
 const { graphqlHTTP } = require("express-graphql");
 const httpStatus = require("http-status");
 
-// app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
-// app.use(bodyParser.json({ limit: "100mb" }));
+app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
+app.use(bodyParser.json({ limit: "100mb" }));
 var corsOptions = {
   origin: "*",
 };
